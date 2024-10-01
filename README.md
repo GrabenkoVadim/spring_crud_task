@@ -35,10 +35,10 @@ To run this project, you will need:
 - Maven
 
 ## How to run project:
-To have or install MySQL and Apache Tomcat 9.0.50
-Clone this project
-Configure application.properties file from resources directory to create connection to db:
-db.driver=com.mysql.cj.jdbc.Driver
-db.url=YOUR_URL
-db.user=YOUR_LOGIN
-db.password=YOUR_PASSWORD
+- To have or install MySQL and Apache Tomcat 9.0.50
+- Clone this project
+- Configure application.properties file from resources directory to create connection to db:
+- db.driver=com.mysql.cj.jdbc.Driver
+- db.url=YOUR_URL
+- db.user=YOUR_LOGIN
+- db.password=YOUR_PASSWORD
