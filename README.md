@@ -8,25 +8,15 @@ The project includes the following endpoints:
 
 - **Create a Customer**
   - **POST** `/api/customers`
-  - **Request Body**:
-    ```json
 
 - **Get All Customers**
   - **GET** `/api/customers`
-  - **Response**:
-    ```json
 
 - **Get a Customer by ID**
   - **GET** `/api/customers/{id}`
 
-  
 - **Update a Customer**
   - **PUT** `/api/customers/{id}`
-  - **Request Body**:
-    ```json
-    
-  - **Response**:
-    ```json
 
 - **Delete a Customer**
   - **DELETE** `/api/customers/{id}`
