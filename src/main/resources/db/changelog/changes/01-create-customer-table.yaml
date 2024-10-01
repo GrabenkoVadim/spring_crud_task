@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-customer-table
+      author: employment
+      changes:
+        - createTable:
+            tableName: customers
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: full_name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: phone
+                  type: varchar(14)
+                  constraints:
+                    nullable: true
+                    unique: true
+              - column:
+                  name: created
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated
+                  type: bigint
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_active
+                  type: boolean
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+  - changeSet:
+      id: add-index-to-email
+      author: employment
+      changes:
+        - addUniqueConstraint:
+            columnNames: email
+            tableName: customers
+            constraintName: uq_customers_email
+
+  - changeSet:
+      id: add-index-to-phone
+      author: employment
+      changes:
+        - addUniqueConstraint:
+            columnNames: phone
+            tableName: customers
+            constraintName: uq_customers_phone
